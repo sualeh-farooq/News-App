@@ -4,7 +4,6 @@
 
 ul {
     margin: 0 auto !important;
-    /* color: white !important; */
 }
 
 .nav-item {
@@ -21,7 +20,6 @@ form {
     flex-direction: column;
     justify-content: center;
     margin: 20px;
-    /* border: 2px solid black; */
     width: max-content;
     margin: 30px auto;
     height: 100px;
@@ -33,7 +31,6 @@ form {
 
 .logo {
     width: 400px;
-    /* border: 2px solid black; */
 }
 
 .date {
@@ -50,41 +47,32 @@ form {
 
 .nav-link:hover {
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .nav-item {
-    /* border-left: 2px solid white; */
     border-right: 2px solid white;
     padding-right: 20px;
 }
 
 .btn {
-    /* background-color: white !important; */
     background-color: #0971b6 !important;
 }
 
 .btn:active {
     background-color: #0b92ec !important;
-    /* color: yellow !important; */
 }
-
-
-/* .card {
-    margin-top: 40px !important;
-} */
 
 .cardsgrid {
     display: flex;
-    flex-wrap: wrap;
     padding: 10px;
     flex-direction: row;
     justify-content: space-between;
-    border: 2px solid black;
 }
 
 .card {
     border: none !important;
-    margin: 20px;
+    margin: 10px;
 }
 
 .cardsgrid2 {
@@ -93,7 +81,6 @@ form {
     padding: 10px;
     flex-direction: row;
     justify-content: space-between;
-    border: 2px solid black;
 }
 
 .footer {
@@ -103,4 +90,60 @@ form {
     font-weight: normal;
     margin-top: 5%;
     height: 100px;
+}
+
+.loader {
+    display: none;
+    justify-content: center;
+    width: 100% !important;
+    height: 100%;
+    background-color: white !important;
+}
+
+.loader img {
+    width: 40%;
+    margin: 0 auto !important;
+    margin-left: 30% !important;
+    margin-bottom: 8%;
+}
+
+.card-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.card-title:hover {
+    color: #0166aa;
+    cursor: pointer;
+}
+
+.card-text {
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.cat-name {
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    margin-left: 20px;
+    margin-top: 30px;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.navbar-brand {
+    cursor: pointer;
+}
+
+.loader2 {
+    /* border: 2px solid black; */
+    width: max-content;
+    height: max-content;
+    margin: 0 auto;
+    display: none;
+}
+
+#loaderImg2 {
+    width: 500px !important;
 }
