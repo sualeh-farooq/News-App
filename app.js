@@ -360,7 +360,6 @@ function showSearch(res) {
     document.getElementById('loader2').style.display = 'block'
     document.getElementById('main2').style.display = 'none'
     document.getElementById('footer').style.display = 'none'
-
     setTimeout(() => {
             newsImage1.src = res.articles[1].urlToImage
             newsImage2.src = res.articles[2].urlToImage
@@ -386,7 +385,6 @@ function showSearch(res) {
             news7.innerHTML = res.articles[7].description
             news8.innerHTML = res.articles[8].description
             news9.innerHTML = res.articles[9].description
-
             document.getElementById('loader2').style.display = 'none'
             document.getElementById('main2').style.display = 'block'
             document.getElementById('footer').style.display = 'block'
