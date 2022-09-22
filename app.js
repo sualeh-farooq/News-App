@@ -40,7 +40,7 @@ const load = () => {
     setTimeout(() => {
         document.getElementById('loader').style.display = 'none'
         document.getElementById('main').style.display = 'block'
-    }, 3000);
+    }, 6000);
 }
 load()
 
