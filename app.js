@@ -34,24 +34,27 @@ const timeSplit = time.slice(0, 5)
 let dateSpace = document.getElementById('dateSpace')
 dateSpace.innerHTML += ` ${date} ${timeSplit}`
 
-// const load = () => {
-//     document.getElementById('loader').style.display = 'block'
-//     document.getElementById('main').style.display = 'none'
-//     setTimeout(() => {
-//         document.getElementById('loader').style.display = 'none'
-//         document.getElementById('main').style.display = 'block'
-//     }, 7000);
-// }
-// load()
+const load = () => {
+    document.getElementById('loader').style.display = 'block'
+    document.getElementById('main').style.display = 'none'
+    setTimeout(() => {
+        document.getElementById('loader').style.display = 'none'
+        document.getElementById('main').style.display = 'block'
+    }, 3000);
+}
+load()
 
 
 
 function win() {
     document.getElementById('loader2').style.display = 'block'
     document.getElementById('main2').style.display = 'none'
+    document.getElementById('footer').style.display = 'none'
+
     setTimeout(() => {
         document.getElementById('loader2').style.display = 'none'
         document.getElementById('main2').style.display = 'block'
+        document.getElementById('footer').style.display = 'block'
         window.location.href = '/index.html'
     }, 3000);
 }
@@ -98,6 +101,8 @@ fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=5827b21baa6d4be589
 const business = () => {
     document.getElementById('loader2').style.display = 'block'
     document.getElementById('main2').style.display = 'none'
+    document.getElementById('footer').style.display = 'none'
+
     setTimeout(() => {
         fetch(`https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=5827b21baa6d4be589936c7bf747abc6`)
             .then(res => res.json())
@@ -134,6 +139,8 @@ const business = () => {
             })
         document.getElementById('loader2').style.display = 'none'
         document.getElementById('main2').style.display = 'block'
+        document.getElementById('footer').style.display = 'block'
+
     }, 4000);
 
 }
@@ -141,6 +148,8 @@ const business = () => {
 const enter = () => {
     document.getElementById('loader2').style.display = 'block'
     document.getElementById('main2').style.display = 'none'
+    document.getElementById('footer').style.display = 'none'
+
     setTimeout(() => {
 
         fetch(`https://newsapi.org/v2/top-headlines?country=us&category=entertainment&apiKey=5827b21baa6d4be589936c7bf747abc6`)
@@ -178,6 +187,8 @@ const enter = () => {
             })
         document.getElementById('loader2').style.display = 'none'
         document.getElementById('main2').style.display = 'block'
+        document.getElementById('footer').style.display = 'block'
+
     }, 4000);
 }
 
@@ -186,6 +197,8 @@ const enter = () => {
 const health = () => {
     document.getElementById('loader2').style.display = 'block'
     document.getElementById('main2').style.display = 'none'
+    document.getElementById('footer').style.display = 'none'
+
     setTimeout(() => {
 
             fetch(`https://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=5827b21baa6d4be589936c7bf747abc6`)
@@ -223,6 +236,8 @@ const health = () => {
                 })
             document.getElementById('loader2').style.display = 'none'
             document.getElementById('main2').style.display = 'block'
+            document.getElementById('footer').style.display = 'block'
+
         },
         4000);
 }
@@ -230,6 +245,8 @@ const health = () => {
 const sci = () => {
     document.getElementById('loader2').style.display = 'block'
     document.getElementById('main2').style.display = 'none'
+    document.getElementById('footer').style.display = 'none'
+
     setTimeout(() => {
 
             fetch(`https://newsapi.org/v2/top-headlines?country=us&category=science&apiKey=5827b21baa6d4be589936c7bf747abc6`)
@@ -267,6 +284,8 @@ const sci = () => {
                 })
             document.getElementById('loader2').style.display = 'none'
             document.getElementById('main2').style.display = 'block'
+            document.getElementById('footer').style.display = 'block'
+
         },
         4000);
 }
@@ -274,6 +293,8 @@ const sci = () => {
 const tech = () => {
     document.getElementById('loader2').style.display = 'block'
     document.getElementById('main2').style.display = 'none'
+    document.getElementById('footer').style.display = 'none'
+
     setTimeout(() => {
 
             fetch(`https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=5827b21baa6d4be589936c7bf747abc6`)
@@ -311,6 +332,65 @@ const tech = () => {
                 })
             document.getElementById('loader2').style.display = 'none'
             document.getElementById('main2').style.display = 'block'
+            document.getElementById('footer').style.display = 'block'
+
+        },
+        4000);
+}
+
+
+
+
+function ser() {
+
+    let search = document.getElementById('search').value.toLowerCase()
+
+    fetch(`https://newsapi.org/v2/everything?q=${search}&apiKey=5827b21baa6d4be589936c7bf747abc6`)
+        .then(res => res.json())
+        .then(res => {
+            showSearch(res)
+            document.getElementById('cat-name').innerHTML = `${search}`
+        }).catch((err) => {
+            console.log(err)
+        })
+}
+
+
+function showSearch(res) {
+    document.getElementById('loader2').style.display = 'block'
+    document.getElementById('main2').style.display = 'none'
+    document.getElementById('footer').style.display = 'none'
+
+    setTimeout(() => {
+            newsImage1.src = res.articles[1].urlToImage
+            newsImage2.src = res.articles[2].urlToImage
+            newsImage3.src = res.articles[3].urlToImage
+            newsImage4.src = res.articles[4].urlToImage
+            newsImage6.src = res.articles[6].urlToImage
+            newsImage7.src = res.articles[7].urlToImage
+            newsImage8.src = res.articles[8].urlToImage
+            newsImage9.src = res.articles[9].urlToImage
+            title1.innerHTML = res.articles[1].title
+            title2.innerHTML = res.articles[2].title
+            title3.innerHTML = res.articles[3].title
+            title4.innerHTML = res.articles[4].title
+            title6.innerHTML = res.articles[6].title
+            title7.innerHTML = res.articles[7].title
+            title8.innerHTML = res.articles[8].title
+            title9.innerHTML = res.articles[9].title
+            news1.innerHTML = res.articles[1].description
+            news2.innerHTML = res.articles[2].description
+            news3.innerHTML = res.articles[3].description
+            news4.innerHTML = res.articles[4].description
+            news6.innerHTML = res.articles[6].description
+            news7.innerHTML = res.articles[7].description
+            news8.innerHTML = res.articles[8].description
+            news9.innerHTML = res.articles[9].description
+
+            document.getElementById('loader2').style.display = 'none'
+            document.getElementById('main2').style.display = 'block'
+            document.getElementById('footer').style.display = 'block'
+
         },
         4000);
 }

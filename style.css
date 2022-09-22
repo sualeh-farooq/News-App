@@ -147,3 +147,15 @@ form {
 #loaderImg2 {
     width: 500px !important;
 }
+
+.right {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 2%;
+    font-size: large;
+}
+
+.form {
+    display: flex;
+}
