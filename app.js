@@ -69,7 +69,7 @@ fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=5827b21baa6d4be589
             // console.log(res.articles[18].description)
             // console.log(res.articles[18].urlToImage)
 
-        newsImage1.src = res.articles[10].urlToImage
+        newsImage1.src = res.articles[15].urlToImage
         newsImage2.src = res.articles[2].urlToImage
         newsImage3.src = res.articles[3].urlToImage
         newsImage4.src = res.articles[4].urlToImage
@@ -77,7 +77,7 @@ fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=5827b21baa6d4be589
         newsImage7.src = res.articles[7].urlToImage
         newsImage8.src = res.articles[8].urlToImage
         newsImage9.src = res.articles[9].urlToImage
-        title1.innerHTML = res.articles[10].title
+        title1.innerHTML = res.articles[15].title
         title2.innerHTML = res.articles[2].title
         title3.innerHTML = res.articles[3].title
         title4.innerHTML = res.articles[4].title
@@ -85,7 +85,7 @@ fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=5827b21baa6d4be589
         title7.innerHTML = res.articles[7].title
         title8.innerHTML = res.articles[8].title
         title9.innerHTML = res.articles[9].title
-        news1.innerHTML = res.articles[10].description
+        news1.innerHTML = res.articles[15].description
         news2.innerHTML = res.articles[2].description
         news3.innerHTML = res.articles[3].description
         news4.innerHTML = res.articles[4].description
